@@ -3,7 +3,7 @@
 <ul>
     <% @tasks.each do |task| %>
       <li><%= link_to task.title, task %>|
-          <%= link_to "削除", task, method: :delete, data: { confirm: '削除してもよろしいですか？'} %>
+          <%= link_to "削除", tasks_path(@task), method: :delete, data: { confirm: '削除してもよろしいですか？'} %>
       </li>
     <% end %>
 </ul>
