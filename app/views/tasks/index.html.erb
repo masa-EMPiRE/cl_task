@@ -2,9 +2,12 @@
 
 <ul>
     <% @tasks.each do |task| %>
-      <li><%= link_to task.title, task %></li>
+      <li><%= link_to task.title, task %>|
+          <%= link_to "削除", "/tasks", method: :destroy %>
+      </li>
     <% end %>
 </ul>
 
 <hr>
-
+<h2>タスク登録</h2>
+<%= render "form" %>
